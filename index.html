@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Авторизация</title>
+</head>
+<body>
+    <section>
+        <form id="loginForm">
+            <h1>Вход</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="email" required>
+                <label for="email">User</label>
+            </div>
+
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+            </div>
+
+            <div class="forget">
+                <label for=""><input type="checkbox">Запомнить меня</label>
+                <a href="#" class="debil">Я забыл пароль</a>
+            </div>
+            
+            <button type="submit">Войти</button>
+            
+            <div class="register">
+                <p class="txt">У меня нет аккаунта <a href="#">Зарегистрироваться</a></p>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Retrieve email and password values
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Here you can perform any validation or authentication process
+            
+            // Redirect to the desired page
+            window.location.href = "vzlom.html";
+        });
+    </script>
+
+</body>
+</html>
